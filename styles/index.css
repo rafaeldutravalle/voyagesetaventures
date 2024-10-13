@@ -1,80 +1,118 @@
+@font-face {
+  font-family: 'Angella White';
+  src: url('../fonts/AngellaWhite.otf') format('truetype'); /* Ajuste o caminho e o formato se necessário */
+  font-weight: normal; /* Ou bold, dependendo da fonte */
+  font-style: normal;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5e4c7;
-  }
-  
-  .header {
-    background-image: url(http://googleusercontent.com/image_generation_content/26);
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .container {
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5e4c7;
+}
+
+.header {
+  background-image: url("./img/VoyagesEtAventures.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px; /* Adiciona padding para espaçamento */
+}
+
+.header-content {
+  display: flex; /* Usar Flexbox */
+  align-items: center; /* Alinhar verticalmente */
+  justify-content: center; /* Centralizar horizontalmente */
+  margin-bottom: 20px; /* Espaço abaixo do header-content */
+}
+
+.logo {
+  margin-right: 20px; /* Espaço entre a logo e o título */
+}
+
+.logo img {
+  max-width: 100%; /* Faz a imagem responsiva */
+  height: auto; /* Mantém a proporção */
+}
+
+.title {
+  font-family: 'Angella White', sans-serif; /* Usar a fonte personalizada */
+  font-size: 110px;
+  font-weight: bold; /* Altere se a fonte não tiver uma versão bold */
+  color: #da9845;
+}
+
+.subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: #644f44;
+  margin-top: 5px; /* Espaço entre o título e o subtítulo */
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #644f44;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff6600;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+  .title {
+      font-size: 36px;
   }
 
-  .logo {
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
-  }
-  
-  .title {
-    font-size: 48px;
-    font-weight: bold;
-    color: #da9845;
-    
-  }
-  
   .subtitle {
-    font-size: 24px;
-    color: #644f44;
-  }
-  
-  nav {
-    margin-top: 20px;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #644f44;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    color: #ff6600;
-  }
-  
-  /* Médias queries pour la réactivité */
-  @media (max-width: 768px) {
-    .title {
-      font-size: 36px;
-    }
-  
-    .subtitle {
       font-size: 20px;
-    }
-  
-    nav li {
-      display: block;
-      margin: 10px 0;
-    }
   }
+
+  nav li {
+      display: block; /* Empilha os itens do menu */
+      margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+      font-size: 28px; /* Tamanho da fonte ainda menor */
+  }
+
+  .subtitle {
+      font-size: 18px;
+  }
+
+  nav li {
+      margin: 5px 0; /* Reduz a margem entre os itens do menu */
+  }
+
+  .container {
+      padding: 10px; /* Reduz padding em telas menores */
+  }
+}
